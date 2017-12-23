@@ -13,4 +13,12 @@ class Aritcle(models.Model):
     content = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.headline 
+        return self.headline
+
+class Comment(models.Model):
+    """创建评论模型"""
+    name = models.CharField(null=True,blank=True,max_length=50)
+    comment = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
